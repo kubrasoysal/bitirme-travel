@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    color: #333;
+}
+
+.dashboard-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.dashboard-header h1 { color: #001F3F; margin-bottom: 10px; }
+.subtitle { color: #666; margin-bottom: 30px; }
+
+/* İstatistik Kartları */
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.stat-card {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    min-width: 180px;
+}
+.stat-card i { font-size: 1.5rem; color: #FF8C00; }
+.stat-info span { display: block; font-size: 0.8rem; color: #888; }
+.stat-info strong { font-size: 1.1rem; color: #001F3F; }
+
+/* Sekmeler */
+.city-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.tab-button {
+    padding: 12px 30px;
+    border: none;
+    background: #e0e0e0;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #555;
+    transition: 0.3s;
+}
+.tab-button.active {
+    background: #001F3F;
+    color: #FF8C00;
+    box-shadow: 0 4px 10px rgba(0,31,63,0.3);
+}
+
+/* Booking Kartı */
+.booking-summary-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #FF8C00;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+.booking-info h4 { margin: 0 0 5px; color: #888; font-size: 0.85rem; text-transform: uppercase; }
+.booking-info h3 { margin: 0 0 8px; color: #001F3F; font-size: 1.2rem; }
+.booking-tag { background: #e3f2fd; color: #1565c0; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+.booking-line { width: 1px; height: 50px; background: #eee; margin: 0 20px; }
+
+/* Günlük Akış */
+.daily-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.day-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+.day-card:hover { transform: translateY(-5px); }
+
+.day-header {
+    background: #001F3F;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+.timeline-item {
+    padding: 15px;
+    border-bottom: 1px solid #f9f9f9;
+    display: flex;
+    gap: 15px;
+}
+.timeline-time {
+    font-weight: bold;
+    color: #FF8C00;
+    font-size: 0.9rem;
+    min-width: 50px;
+}
+.timeline-content strong { display: block; color: #333; font-size: 0.95rem; }
+.timeline-content .meta { font-size: 0.8rem; color: #777; margin-top: 3px; display: block; }
+
+.restart-btn {
+    text-decoration: none;
+    color: #fff;
+    background: #FF8C00;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+.restart-btn:hover { background: #e67e22; }

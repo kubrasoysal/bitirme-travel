@@ -1,0 +1,96 @@
+/* GENEL VE RESET STİLLERİ */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; 
+    color: #001F3F; 
+    /* Anasayfanın dışındaki alanlarda kaydırma çubuğu olmasın */
+    overflow-x: hidden; 
+}
+
+/* HEADER - Görünürlüğü garanti altına alan stil */
+.main-header {
+    width: 100%;
+    padding: 15px 5%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001F3F; /* Lacivert arka plan */
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+.logo {
+    font-size: 1.8em; 
+    font-weight: bold;
+    color: #FF8C00; /* Vurgu Turuncu */
+    text-decoration: none; 
+}
+
+
+/* HERO ALANI - GÖRSEL ARKA PLAN */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    /* GÖRSEL VE KOYU KATMAN (OVERLAY) */
+    /* Bu URL'deki görseli değiştirebilirsiniz. */
+    background-image: linear-gradient(rgba(0, 31, 63, 0.6), rgba(0, 31, 63, 0.6)), 
+                      url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1935&auto=format&fit=crop');
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax (kaydırma) efekti katar */
+    
+    color: #fff;
+}
+
+/* HERO İÇERİK - CAM EFEKTİ (Glassmorphism) */
+.hero-content {
+    background: rgba(255, 255, 255, 0.1); /* Hafif beyaz şeffaflık */
+    backdrop-filter: blur(10px); /* Arka planı bulanıklaştırır */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 60px 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content h1 {
+    font-size: 4.5em;
+    margin-bottom: 15px;
+    font-weight: 800;
+    color: #FF8C00; /* Vurgu Turuncu */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.4em;
+    margin-bottom: 50px;
+    font-weight: 300;
+    color: #F4F4F4;
+}
+
+/* BUTON - DAHA DİNAMİK */
+.cta-button {
+    display: inline-block;
+    padding: 18px 50px;
+    background-color: #FF8C00;
+    color: #001F3F;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2em;
+    border-radius: 50px; /* Tam yuvarlak kenar */
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(255, 140, 0, 0.4);
+}
+
+.cta-button:hover {
+    background-color: #e67e22;
+    transform: translateY(-5px); /* Havalanma efekti */
+    box-shadow: 0 15px 25px rgba(255, 140, 0, 0.6);
+}
